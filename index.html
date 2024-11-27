@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaveSurfer and HLS.js Integration</title>
+</head>
+<body>
+    <audio id="video" controls></audio>
+    <div id="waveform"></div>
+    <button id="playButton">Play</button>
+    <button id="zoomIn">Zoom In</button>
+    <button id="zoomOut">Zoom Out</button>
+    <canvas id="myCanvas"></canvas>
+    <div id="waveformContainer"></div>
+    <button id="record">Record</button>
+  <button id="pause" style="display: none;">Pause</button>
+
+  <select id="mic-select">
+    <option value="" hidden>Select mic</option>
+  </select>
+
+  <label><input type="checkbox" id="scrollingWaveform" /> Scrolling waveform</label>
+
+  <label><input type="checkbox" id="continuousWaveform" checked="checked" /> Continuous waveform</label>
+
+  <p id="progress">00:00</p>
+    <div id="mic" style="border: 1px solid #ddd; border-radius: 4px; margin-top: 1rem"></div>
+    <div id="recordings" style="margin: 1rem 0"></div>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="wavesurfer.hls.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
